@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Msg from '/Msg.jsx'
 import {
   AppBar,
   Badge,
@@ -14,7 +15,7 @@ import {
   withStyles
 } from '@material-ui/core';
 import { mainListItems, secondaryListItems } from './ListItems.jsx';
-import SimpleTable from './SimpleTable.jsx';
+
 
 var drawerWidth = 240;
 
@@ -97,7 +98,7 @@ var styles = theme => ({
 
 class Dashboard extends React.Component {
   state = {
-    open: true,
+    open: false,
   };
   
   handleDrawerOpen = () => {
@@ -138,7 +139,7 @@ class Dashboard extends React.Component {
                 noWrap
                 className={classes.title}
                 >
-                Dashboard
+                Chat Board
               </Typography>
               <IconButton color="inherit">
                 <Badge badgeContent={4} color="secondary">
@@ -167,13 +168,17 @@ class Dashboard extends React.Component {
           <main className={classes.content}>
             <div className={classes.appBarSpacer} />
             <Typography variant="h4" gutterBottom component="h2">
-              Orders
+              
             </Typography>
             <Typography variant="h4" gutterBottom component="h2">
-              Products
+              
             </Typography>
             <div className={classes.tableContainer}>
-              <SimpleTable />
+              
+              <Msg />
+              
+              
+              
             </div>
           </main>
         </div>
