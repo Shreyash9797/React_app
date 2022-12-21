@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Msg from '/Msg.jsx'
+import Msg from './Msg.jsx'
 import {
   AppBar,
   Badge,
